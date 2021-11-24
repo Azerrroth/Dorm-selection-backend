@@ -1,0 +1,344 @@
+2021/10/21 10:01:52 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:01:52 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:01:52 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:01:52 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:01:52 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:01:52 [notice] 1#1: start worker processes
+2021/10/21 10:01:52 [notice] 1#1: start worker process 24
+2021/10/21 10:01:52 [notice] 1#1: start worker process 25
+2021/10/21 10:02:30 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:02:30 [notice] 24#24: gracefully shutting down
+2021/10/21 10:02:30 [notice] 24#24: exiting
+2021/10/21 10:02:30 [notice] 24#24: exit
+2021/10/21 10:02:30 [notice] 25#25: gracefully shutting down
+2021/10/21 10:02:30 [notice] 25#25: exiting
+2021/10/21 10:02:30 [notice] 25#25: exit
+2021/10/21 10:02:30 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/10/21 10:02:30 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 10:02:30 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:02:30 [notice] 1#1: exit
+2021/10/21 10:03:01 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:03:01 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:03:01 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:03:01 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:03:01 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:03:01 [notice] 1#1: start worker processes
+2021/10/21 10:03:01 [notice] 1#1: start worker process 24
+2021/10/21 10:03:01 [notice] 1#1: start worker process 25
+2021/10/21 10:04:50 [error] 24#24: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:04:50 [warn] 24#24: *1 upstream server temporarily disabled while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:04:50 [error] 24#24: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:04:50 [warn] 24#24: *1 upstream server temporarily disabled while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:04:50 [error] 24#24: *1 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:05:07 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:05:07 [notice] 25#25: gracefully shutting down
+2021/10/21 10:05:07 [notice] 25#25: exiting
+2021/10/21 10:05:07 [notice] 25#25: exit
+2021/10/21 10:05:07 [notice] 24#24: gracefully shutting down
+2021/10/21 10:05:07 [notice] 24#24: exiting
+2021/10/21 10:05:07 [notice] 24#24: exit
+2021/10/21 10:05:07 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:05:07 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:05:07 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:05:07 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/10/21 10:05:07 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 10:05:07 [notice] 1#1: exit
+2021/10/21 10:05:35 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:05:35 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:05:35 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:05:35 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:05:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:05:35 [notice] 1#1: start worker processes
+2021/10/21 10:05:35 [notice] 1#1: start worker process 25
+2021/10/21 10:05:35 [notice] 1#1: start worker process 26
+2021/10/21 10:35:55 [error] 25#25: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:35:55 [warn] 25#25: *5 upstream server temporarily disabled while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:35:55 [error] 25#25: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:35:55 [warn] 25#25: *5 upstream server temporarily disabled while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "register.sincos.vip"
+2021/10/21 10:35:55 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:57 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:57 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:57 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:35:58 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://localhost/", host: "register.sincos.vip"
+2021/10/21 10:35:59 [error] 25#25: *5 no live upstreams while connecting to upstream, client: 124.205.77.154, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://localhost/favicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 10:36:41 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:36:41 [notice] 25#25: gracefully shutting down
+2021/10/21 10:36:41 [notice] 26#26: gracefully shutting down
+2021/10/21 10:36:41 [notice] 26#26: exiting
+2021/10/21 10:36:41 [notice] 25#25: exiting
+2021/10/21 10:36:41 [notice] 26#26: exit
+2021/10/21 10:36:41 [notice] 25#25: exit
+2021/10/21 10:36:41 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:36:41 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:36:41 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:36:41 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/10/21 10:36:41 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 10:36:41 [notice] 1#1: exit
+2021/10/21 10:42:21 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:42:21 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:42:21 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:42:21 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:42:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:42:21 [notice] 1#1: start worker processes
+2021/10/21 10:42:21 [notice] 1#1: start worker process 24
+2021/10/21 10:42:21 [notice] 1#1: start worker process 25
+2021/10/21 10:44:33 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:44:33 [notice] 24#24: gracefully shutting down
+2021/10/21 10:44:33 [notice] 24#24: exiting
+2021/10/21 10:44:33 [notice] 24#24: exit
+2021/10/21 10:44:33 [notice] 25#25: gracefully shutting down
+2021/10/21 10:44:33 [notice] 25#25: exiting
+2021/10/21 10:44:33 [notice] 25#25: exit
+2021/10/21 10:44:33 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/10/21 10:44:33 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 10:44:33 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:44:33 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:44:33 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:44:33 [notice] 1#1: exit
+2021/10/21 10:44:46 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:44:46 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:44:46 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:44:46 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:44:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:44:46 [notice] 1#1: start worker processes
+2021/10/21 10:44:46 [notice] 1#1: start worker process 25
+2021/10/21 10:44:46 [notice] 1#1: start worker process 26
+2021/10/21 10:46:01 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:46:01 [notice] 25#25: gracefully shutting down
+2021/10/21 10:46:01 [notice] 25#25: exiting
+2021/10/21 10:46:01 [notice] 25#25: exit
+2021/10/21 10:46:01 [notice] 26#26: gracefully shutting down
+2021/10/21 10:46:01 [notice] 26#26: exiting
+2021/10/21 10:46:01 [notice] 26#26: exit
+2021/10/21 10:46:01 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/10/21 10:46:01 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 10:46:01 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:46:01 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:46:01 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:46:01 [notice] 1#1: exit
+2021/10/21 10:46:10 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:46:10 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:46:10 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:46:10 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:46:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:46:10 [notice] 1#1: start worker processes
+2021/10/21 10:46:10 [notice] 1#1: start worker process 25
+2021/10/21 10:46:10 [notice] 1#1: start worker process 26
+2021/10/21 10:46:28 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:46:28 [notice] 25#25: gracefully shutting down
+2021/10/21 10:46:28 [notice] 25#25: exiting
+2021/10/21 10:46:28 [notice] 25#25: exit
+2021/10/21 10:46:28 [notice] 26#26: gracefully shutting down
+2021/10/21 10:46:28 [notice] 26#26: exiting
+2021/10/21 10:46:28 [notice] 26#26: exit
+2021/10/21 10:46:28 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:46:28 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:46:28 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:46:28 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/10/21 10:46:28 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 10:46:28 [notice] 1#1: exit
+2021/10/21 10:46:40 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:46:40 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:46:40 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:46:40 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:46:40 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:46:40 [notice] 1#1: start worker processes
+2021/10/21 10:46:40 [notice] 1#1: start worker process 24
+2021/10/21 10:46:40 [notice] 1#1: start worker process 25
+2021/10/21 10:49:04 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:49:04 [notice] 24#24: gracefully shutting down
+2021/10/21 10:49:04 [notice] 24#24: exiting
+2021/10/21 10:49:04 [notice] 24#24: exit
+2021/10/21 10:49:04 [notice] 25#25: gracefully shutting down
+2021/10/21 10:49:04 [notice] 25#25: exiting
+2021/10/21 10:49:04 [notice] 25#25: exit
+2021/10/21 10:49:04 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:49:04 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 10:49:04 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:49:04 [notice] 1#1: exit
+2021/10/21 10:49:49 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:49:49 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:49:49 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:49:49 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:49:49 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:49:49 [notice] 1#1: start worker processes
+2021/10/21 10:49:49 [notice] 1#1: start worker process 24
+2021/10/21 10:49:49 [notice] 1#1: start worker process 25
+2021/10/21 10:51:02 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:51:02 [notice] 25#25: gracefully shutting down
+2021/10/21 10:51:02 [notice] 25#25: exiting
+2021/10/21 10:51:02 [notice] 25#25: exit
+2021/10/21 10:51:02 [notice] 24#24: gracefully shutting down
+2021/10/21 10:51:02 [notice] 24#24: exiting
+2021/10/21 10:51:02 [notice] 24#24: exit
+2021/10/21 10:51:02 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:51:02 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:51:02 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:51:02 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/10/21 10:51:02 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 10:51:02 [notice] 1#1: exit
+2021/10/21 10:51:12 [notice] 1#1: using the "epoll" event method
+2021/10/21 10:51:12 [notice] 1#1: nginx/1.21.3
+2021/10/21 10:51:12 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 10:51:12 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 10:51:12 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 10:51:12 [notice] 1#1: start worker processes
+2021/10/21 10:51:12 [notice] 1#1: start worker process 25
+2021/10/21 10:51:12 [notice] 1#1: start worker process 26
+2021/10/21 10:56:41 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 10:56:41 [notice] 25#25: gracefully shutting down
+2021/10/21 10:56:41 [notice] 25#25: exiting
+2021/10/21 10:56:41 [notice] 25#25: exit
+2021/10/21 10:56:41 [notice] 26#26: gracefully shutting down
+2021/10/21 10:56:41 [notice] 26#26: exiting
+2021/10/21 10:56:41 [notice] 26#26: exit
+2021/10/21 10:56:41 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 10:56:41 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 10:56:41 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 10:56:41 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/10/21 10:56:41 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 10:56:41 [notice] 1#1: exit
+2021/10/21 15:32:14 [emerg] 1#1: host not found in upstream "dorm" in /etc/nginx/conf.d/dorm.conf:13
+2021/10/21 15:33:29 [notice] 1#1: using the "epoll" event method
+2021/10/21 15:33:29 [notice] 1#1: nginx/1.21.3
+2021/10/21 15:33:29 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 15:33:29 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 15:33:29 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 15:33:29 [notice] 1#1: start worker processes
+2021/10/21 15:33:29 [notice] 1#1: start worker process 25
+2021/10/21 15:33:29 [notice] 1#1: start worker process 26
+2021/10/21 15:34:02 [error] 25#25: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.76.215, server: dorm.sincos.vip, request: "POST /login?name=bbbbbb&password=10293040 HTTP/1.1", upstream: "http://172.19.0.3:80/api/v1/login?name=bbbbbb&password=10293040", host: "dorm.sincos.vip"
+2021/10/21 15:34:33 [error] 25#25: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.76.215, server: dorm.sincos.vip, request: "POST /login?name=bbbbbb&password=10293040 HTTP/1.1", upstream: "http://172.19.0.3:80/api/v1/login?name=bbbbbb&password=10293040", host: "dorm.sincos.vip"
+2021/10/21 15:39:16 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 15:39:16 [notice] 25#25: gracefully shutting down
+2021/10/21 15:39:16 [notice] 25#25: exiting
+2021/10/21 15:39:16 [notice] 25#25: exit
+2021/10/21 15:39:16 [notice] 26#26: gracefully shutting down
+2021/10/21 15:39:16 [notice] 26#26: exiting
+2021/10/21 15:39:16 [notice] 26#26: exit
+2021/10/21 15:39:16 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 15:39:16 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 15:39:16 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 15:39:16 [notice] 1#1: exit
+2021/10/21 15:40:03 [notice] 1#1: using the "epoll" event method
+2021/10/21 15:40:03 [notice] 1#1: nginx/1.21.3
+2021/10/21 15:40:03 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 15:40:03 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 15:40:03 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 15:40:03 [notice] 1#1: start worker processes
+2021/10/21 15:40:03 [notice] 1#1: start worker process 25
+2021/10/21 15:40:03 [notice] 1#1: start worker process 26
+2021/10/21 15:40:13 [error] 25#25: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.76.215, server: register.sincos.vip, request: "POST / HTTP/1.1", upstream: "http://172.20.0.4:80/api/v1/register", host: "register.sincos.vip"
+2021/10/21 15:41:32 [error] 25#25: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.76.215, server: register.sincos.vip, request: "GET / HTTP/1.1", upstream: "http://172.20.0.4:80/api/v1/register", host: "register.sincos.vip"
+2021/10/21 15:41:32 [error] 25#25: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 124.205.76.215, server: register.sincos.vip, request: "GET /favicon.ico HTTP/1.1", upstream: "http://172.20.0.4:80/api/v1/registerfavicon.ico", host: "register.sincos.vip", referrer: "http://register.sincos.vip/"
+2021/10/21 15:41:56 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 15:41:56 [notice] 25#25: gracefully shutting down
+2021/10/21 15:41:56 [notice] 25#25: exiting
+2021/10/21 15:41:56 [notice] 26#26: gracefully shutting down
+2021/10/21 15:41:56 [notice] 26#26: exiting
+2021/10/21 15:41:56 [notice] 25#25: exit
+2021/10/21 15:41:56 [notice] 26#26: exit
+2021/10/21 15:41:56 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 15:41:56 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 15:41:56 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 15:41:56 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/10/21 15:41:56 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 15:41:56 [notice] 1#1: exit
+2021/10/21 15:42:47 [notice] 1#1: using the "epoll" event method
+2021/10/21 15:42:47 [notice] 1#1: nginx/1.21.3
+2021/10/21 15:42:47 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 15:42:47 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 15:42:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 15:42:47 [notice] 1#1: start worker processes
+2021/10/21 15:42:47 [notice] 1#1: start worker process 24
+2021/10/21 15:42:47 [notice] 1#1: start worker process 25
+2021/10/21 15:54:14 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 15:54:14 [notice] 25#25: gracefully shutting down
+2021/10/21 15:54:14 [notice] 25#25: exiting
+2021/10/21 15:54:14 [notice] 25#25: exit
+2021/10/21 15:54:14 [notice] 24#24: gracefully shutting down
+2021/10/21 15:54:14 [notice] 24#24: exiting
+2021/10/21 15:54:14 [notice] 24#24: exit
+2021/10/21 15:54:14 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 15:54:14 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 15:54:14 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 15:54:14 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/10/21 15:54:14 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 15:54:14 [notice] 1#1: exit
+2021/10/21 15:54:24 [notice] 1#1: using the "epoll" event method
+2021/10/21 15:54:24 [notice] 1#1: nginx/1.21.3
+2021/10/21 15:54:24 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 15:54:24 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 15:54:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 15:54:24 [notice] 1#1: start worker processes
+2021/10/21 15:54:24 [notice] 1#1: start worker process 25
+2021/10/21 15:54:24 [notice] 1#1: start worker process 26
+2021/10/21 16:12:58 [error] 25#25: *1 open() "/usr/share/nginx/html/api/v1/register" failed (2: No such file or directory), client: 35.171.129.151, server: localhost, request: "POST /api/v1/register?name=12345&password=200000 HTTP/1.1", host: "sincos.vip"
+2021/10/21 16:12:59 [error] 25#25: *1 open() "/usr/share/nginx/html/api/v1/login" failed (2: No such file or directory), client: 35.171.129.151, server: localhost, request: "POST /api/v1/login?name=123456&password=200000 HTTP/1.1", host: "sincos.vip"
+2021/10/21 16:12:59 [error] 25#25: *1 open() "/usr/share/nginx/html/api/v1/dorm" failed (2: No such file or directory), client: 35.171.129.151, server: localhost, request: "POST /api/v1/dorm?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMzQ1NiIsInBhc3N3b3JkIjoiMjAwMDAwIiwiZXhwIjoxNjM0NzYwNjE4LCJpc3MiOiJnaW4tYmxvZyJ9.3yd1qmtrYfC8nPISDHd8Uw_JkqwNFz5caf3mbs2zxB4&page=1&num=20 HTTP/1.1", host: "sincos.vip"
+2021/10/21 16:15:57 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 16:15:57 [notice] 25#25: gracefully shutting down
+2021/10/21 16:15:57 [notice] 25#25: exiting
+2021/10/21 16:15:57 [notice] 25#25: exit
+2021/10/21 16:15:57 [notice] 26#26: gracefully shutting down
+2021/10/21 16:15:57 [notice] 26#26: exiting
+2021/10/21 16:15:57 [notice] 26#26: exit
+2021/10/21 16:15:57 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 16:15:57 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 16:15:57 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 16:15:57 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/10/21 16:15:57 [notice] 1#1: worker process 26 exited with code 0
+2021/10/21 16:15:57 [notice] 1#1: exit
+2021/10/21 16:26:51 [notice] 1#1: using the "epoll" event method
+2021/10/21 16:26:51 [notice] 1#1: nginx/1.21.3
+2021/10/21 16:26:51 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 16:26:51 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 16:26:51 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 16:26:51 [notice] 1#1: start worker processes
+2021/10/21 16:26:51 [notice] 1#1: start worker process 24
+2021/10/21 16:26:51 [notice] 1#1: start worker process 25
+2021/10/21 16:35:39 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 16:35:39 [notice] 25#25: gracefully shutting down
+2021/10/21 16:35:39 [notice] 25#25: exiting
+2021/10/21 16:35:39 [notice] 24#24: gracefully shutting down
+2021/10/21 16:35:39 [notice] 24#24: exiting
+2021/10/21 16:35:39 [notice] 24#24: exit
+2021/10/21 16:35:39 [notice] 25#25: exit
+2021/10/21 16:35:39 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 16:35:39 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 16:35:39 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 16:35:39 [notice] 1#1: exit
+2021/10/21 16:38:40 [notice] 1#1: using the "epoll" event method
+2021/10/21 16:38:40 [notice] 1#1: nginx/1.21.3
+2021/10/21 16:38:40 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/10/21 16:38:40 [notice] 1#1: OS: Linux 3.10.0-1160.42.2.el7.x86_64
+2021/10/21 16:38:40 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/10/21 16:38:40 [notice] 1#1: start worker processes
+2021/10/21 16:38:40 [notice] 1#1: start worker process 24
+2021/10/21 16:38:40 [notice] 1#1: start worker process 25
+2021/10/21 17:18:05 [error] 24#24: *47 open() "/usr/share/nginx/html/wp-login.php" failed (2: No such file or directory), client: 186.64.114.80, server: localhost, request: "GET /wp-login.php HTTP/1.1", host: "sincos.vip"
+2021/10/21 17:34:38 [error] 24#24: *49 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 143.110.243.141, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "123.56.131.199:80"
+2021/10/21 17:41:22 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/10/21 17:41:22 [notice] 25#25: gracefully shutting down
+2021/10/21 17:41:22 [notice] 25#25: exiting
+2021/10/21 17:41:22 [notice] 25#25: exit
+2021/10/21 17:41:22 [notice] 24#24: gracefully shutting down
+2021/10/21 17:41:22 [notice] 24#24: exiting
+2021/10/21 17:41:22 [notice] 24#24: exit
+2021/10/21 17:41:22 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/10/21 17:41:22 [notice] 1#1: worker process 25 exited with code 0
+2021/10/21 17:41:22 [notice] 1#1: signal 29 (SIGIO) received
+2021/10/21 17:41:22 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/10/21 17:41:22 [notice] 1#1: worker process 24 exited with code 0
+2021/10/21 17:41:22 [notice] 1#1: exit
