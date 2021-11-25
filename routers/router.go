@@ -45,6 +45,8 @@ func InitRouter() *gin.Engine {
 				"message": "token access",
 			})
 		})
+
+		apiv1.POST("/updateUserProfile", v1.UpdateUserProfile)
 		apiv1.GET("/updateCertifyCode", v1.UpdateCertifyCode)
 		apiv1.POST("/checkOutRoom", v1.CheckOutRoom)
 		apiv1.POST("/bookOrder", v1.BookOrder)

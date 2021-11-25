@@ -176,26 +176,45 @@ func UpdateCertifyCode(c *gin.Context) {
 }
 
 func UpdateUserProfile(c *gin.Context) {
-	id, _ := strconv.Atoi(c.GetHeader("x-user-id"))
-	valid := validation.Validation{}
-	valid.Required(id, "id").Message("未携带用户ID头")
-
 	code := e.INVALID_PARAMS
-	data := make(map[string]interface{})
+	json := make(map[string]interface{})
+	valid := validation.Validation{}
+	err := c.BindJSON(&json)
+	var user_id string
+
+	student_id := json["student_id"].(string)
+	gender := json["gender"].(float64)
+	name_str := json["name"].(string)
+	mail := json["mail"].(string)
+
+	if err == nil {
+		user_id = c.GetHeader("x-user-id")
+		if user_id == "" {
+			user_id = json["userId"].(string)
+		}
+		valid.Required(user_id, "user_id").Message("用户id不能为空")
+	}
+
 	if !valid.HasErrors() {
+		id, _ := strconv.Atoi(user_id)
+
 		if !models.ExistUserByID(uint(id)) {
 			code = e.ERROR_NOT_EXIST_USER
 		} else {
 			user := models.GetUserByID(uint(id))
-			nameStr := data["name"].(string)
-			user.Name = &nameStr
+			user.Name = &name_str
+			user.Gender = uint(gender)
+			user.Mail = &mail
+			user.StudentId = &student_id
+
+			models.UpdateUser(&user)
+			code = e.SUCCESS
 		}
 	}
 
 	c.JSON(http.StatusOK, gin.H{
 		"code": code,
 		"msg":  e.GetMsg(code),
-		"data": data,
+		"data": json,
 	})
-
 }
