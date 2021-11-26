@@ -10,7 +10,9 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
 
+	"go-gin-example/pkg/gender"
 	"go-gin-example/pkg/setting"
+	"go-gin-example/pkg/util"
 )
 
 // var db *gorm.DB
@@ -79,8 +81,9 @@ func init() {
 
 	// FillDormIfEmpty(fillNums)
 	FillUserIfEmpty(fillNums)
-
-	Test()
+	if int(GetUserCount("")) == 0 {
+		Init()
+	}
 	if err != nil {
 		log.Println(err)
 	}
@@ -128,4 +131,44 @@ func Test() {
 	// 	AddRoom(&Room{BuildingId: 1, Name: fmt.Sprintf("4%s", numstr), Gender: gender.FEMALE, TotalBeds: 4, AvailableBeds: uint(rand.Intn(5))})
 	// }
 
+}
+
+func Init() {
+	buildings := 10
+	rooms := 50
+	InitUsers(1000)
+	InitBuildings(buildings)
+	InitRooms(buildings, rooms)
+}
+
+func InitBuildings(nums int) {
+	for i := 1; i <= nums; i++ {
+		AddBuilding(fmt.Sprintf("%v号楼", i))
+	}
+}
+
+func InitRooms(buildingNums int, roomNumsPerFloor int) {
+	for buildId := 1; buildId <= buildingNums; buildId++ {
+		for i := 1; i <= roomNumsPerFloor; i++ {
+			var numstr string
+			if i < 10 {
+				numstr = fmt.Sprintf("0%d", i)
+			} else {
+				numstr = fmt.Sprintf("%d", i)
+			}
+			buildingStr := fmt.Sprintf("%v号楼", buildId)
+			AddRoom(&Room{BuildingId: buildId, Name: fmt.Sprintf("%s 1%s", buildingStr, numstr), Gender: gender.MALE, TotalBeds: 4, AvailableBeds: uint(rand.Intn(5))})
+			AddRoom(&Room{BuildingId: buildId, Name: fmt.Sprintf("%s 2%s", buildingStr, numstr), Gender: gender.MALE, TotalBeds: 4, AvailableBeds: uint(rand.Intn(5))})
+			AddRoom(&Room{BuildingId: buildId, Name: fmt.Sprintf("%s 3%s", buildingStr, numstr), Gender: gender.FEMALE, TotalBeds: 4, AvailableBeds: uint(rand.Intn(5))})
+			AddRoom(&Room{BuildingId: buildId, Name: fmt.Sprintf("%s 4%s", buildingStr, numstr), Gender: gender.FEMALE, TotalBeds: 4, AvailableBeds: uint(rand.Intn(5))})
+		}
+	}
+}
+
+func InitUsers(nums int) {
+	password := "123456"
+	for i := 1; i <= nums; i++ {
+		crypted, salt, _ := util.Encrypt(password)
+		AddUser(fmt.Sprintf("testuser%d", i), string(crypted), string(salt))
+	}
 }

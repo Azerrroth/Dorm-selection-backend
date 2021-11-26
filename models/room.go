@@ -36,6 +36,11 @@ func GetRoomWithAvailableBedsByBuildingId(buildingId uint, userNum uint) (rooms 
 	return
 }
 
+func GetRoomWithAvailableBedsByBuildingIdAndGender(buildingId uint, userNum uint, gender uint) (rooms []*Room, err error) {
+	err = dormDB.Where("building_id = ? AND available_beds > ? AND gender = ?", buildingId, userNum, gender).Find(&rooms).Error
+	return
+}
+
 func AddRoom(room *Room) (err error) {
 	err = dormDB.Create(room).Error
 	return

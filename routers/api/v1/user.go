@@ -85,7 +85,7 @@ func Register(c *gin.Context) {
 
 func Login(c *gin.Context) {
 	json := make(map[string]interface{})
-	err := c.BindJSON(&json)
+	err := c.ShouldBind(&json)
 	// 检查表单
 	username := c.Query("username")
 	password := c.Query("password")

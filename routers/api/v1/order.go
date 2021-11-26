@@ -94,7 +94,7 @@ func BookOrder(c *gin.Context) {
 	// 5. Check available room for them
 	//    If exists, response. Else response error
 
-	rooms, _ := models.GetRoomWithAvailableBedsByBuildingId(buildingId, usersNum)
+	rooms, _ := models.GetRoomWithAvailableBedsByBuildingIdAndGender(buildingId, usersNum, gender)
 	if len(rooms) == 0 {
 		order.IsSuccess = false
 		models.UpdateOrder(&order)
