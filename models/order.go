@@ -21,11 +21,11 @@ func GetOrderCount(maps interface{}) (count int64) {
 }
 
 func AddOrder(order *Order) (uint, error) {
-	result := dormDB.Create(order)
+	result := orderDB.Create(order)
 	return order.ID, result.Error
 }
 
 func UpdateOrder(order *Order) error {
-	err := dormDB.Save(order).Error
+	err := orderDB.Save(order).Error
 	return err
 }
