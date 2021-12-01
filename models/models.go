@@ -83,17 +83,6 @@ func init() {
 	fmt.Println(redisHost, redisPort, redisPassword)
 	redisDB = ConnectRedis(redisHost, redisPort, redisPassword, retryTimes, time.Duration(waitTime)*time.Millisecond)
 
-	err = redisDB.Set(ctx, "test", "test11111", time.Second*time.Duration(60)).Err()
-	if err != nil {
-		log.Fatal(2, "Fail to set redis: %v", err)
-	}
-
-	val, err := redisDB.Get(ctx, "test").Result()
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println("key", val)
-
 	orderDB = userDB
 
 	userDB.AutoMigrate(&User{})
