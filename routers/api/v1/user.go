@@ -17,19 +17,6 @@ import (
 )
 
 var jwtValidityPeriod = setting.JwtValidityPeriod
-var LoginList map[string]interface{}
-
-func GetUser(c *gin.Context) {
-	username := c.Query("username")
-
-	maps := make(map[string]interface{})
-	// data := make(map[string]interface{})
-
-	if username != "" {
-		maps["username"] = username
-	}
-
-}
 
 func Register(c *gin.Context) {
 	json := make(map[string]interface{})
@@ -132,9 +119,11 @@ func Login(c *gin.Context) {
 					c.Header("new-token", token)
 					data["token"] = token
 					data["userInfo"] = userInfo
-					currentTime := time.Now()
-					user.LoginAt = &currentTime
-					models.UpdateUser(&user)
+					if time.Since(*user.LoginAt).Minutes() > 5 {
+						currentTime := time.Now()
+						user.LoginAt = &currentTime
+						models.UpdateUser(&user)
+					}
 					// data["uid"] = session.Get("uid")
 				}
 				// Open session

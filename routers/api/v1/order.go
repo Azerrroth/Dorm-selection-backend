@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go-gin-example/models"
 	"go-gin-example/pkg/e"
+	genderConfig "go-gin-example/pkg/gender"
 	"math/rand"
 	"net/http"
 
@@ -106,6 +107,8 @@ func BookOrder(c *gin.Context) {
 	room := rooms[choice]
 	room.AvailableBeds -= usersNum
 	models.UpdateRoom(room)
+	// Deal redis data.
+	models.MinusBuildingStatus(buildingId, -int(usersNum), gender == genderConfig.MALE)
 
 	order.IsSuccess = true
 	models.UpdateOrder(&order)

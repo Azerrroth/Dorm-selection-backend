@@ -10,6 +10,7 @@ import (
 
 	"go-gin-example/models"
 	"go-gin-example/pkg/e"
+	"go-gin-example/pkg/gender"
 )
 
 func GetBuildingList(c *gin.Context) {
@@ -145,6 +146,7 @@ func CheckOutRoom(c *gin.Context) {
 					models.UpdateUser2Room(&u2r)
 					room := models.GetRoomByID(uint(roomId))
 					room.AvailableBeds += 1
+					models.MinusBuildingStatus(uint(room.BuildingId), 1, room.Gender == gender.MALE)
 					models.UpdateRoom(&room)
 					code = e.SUCCESS
 					break

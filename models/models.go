@@ -1,12 +1,14 @@
 package models
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"math/rand"
 	"os"
 	"time"
 
+	redis "github.com/go-redis/redis/v8"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
@@ -21,6 +23,9 @@ import (
 var userDB, dormDB, orderDB *gorm.DB
 var tablePrefix string
 
+var redisDB *redis.Client
+var ctx = context.Background()
+
 type Model struct {
 	// gorm.Model
 	ID        uint      `gorm:"primaryKey;PRIMARY_KEY;AUTO_INCREMENT;NOT NULL;" json:"id"`
@@ -34,6 +39,7 @@ func init() {
 		dbName, user, password, userHost, dormHost string
 		waitTime, retryTimes                       int
 	)
+	var redisHost, redisPassword, redisPort string
 	sec, err := setting.Cfg.GetSection("database")
 	if err != nil {
 		log.Fatal(2, "Fail to get section 'database': %v", err)
@@ -49,12 +55,14 @@ func init() {
 	tablePrefix = sec.Key("TABLE_PREFIX").String()
 	waitTime, _ = sec.Key("WAIT_TIME").Int()
 	retryTimes, _ = sec.Key("RETRY_TIMES").Int()
+	redisHost = sec.Key("REDIS_HOST").String()
+	redisPassword = sec.Key("REDIS_PASSWORD").String()
+	redisPort = sec.Key("REDIS_PORT").String()
 
 	rand.Seed(time.Now().Unix())
 	// db, err = ConnectDB(user, password, host, dbName, tablePrefix)
 	userDB, errUser = ConnectDB(user, password, userHost, dbName, tablePrefix)
 	dormDB, errDorm = ConnectDB(user, password, dormHost, dbName, tablePrefix)
-
 	if errUser != nil || errDorm != nil {
 		fmt.Println(err)
 		for i := 0; i < retryTimes; i = i + 1 {
@@ -71,6 +79,21 @@ func init() {
 			}
 		}
 	}
+
+	fmt.Println(redisHost, redisPort, redisPassword)
+	redisDB = ConnectRedis(redisHost, redisPort, redisPassword, retryTimes, time.Duration(waitTime)*time.Millisecond)
+
+	err = redisDB.Set(ctx, "test", "test11111", time.Second*time.Duration(60)).Err()
+	if err != nil {
+		log.Fatal(2, "Fail to set redis: %v", err)
+	}
+
+	val, err := redisDB.Get(ctx, "test").Result()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("key", val)
+
 	orderDB = userDB
 
 	userDB.AutoMigrate(&User{})

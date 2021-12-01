@@ -100,8 +100,17 @@ func UpdateUser(user *User) bool {
 
 func ExistUserByUsername(username string) bool {
 	var count int64
-	userDB.Model(&User{}).Where("username = ?", username).Count(&count)
-	return int(count) > 0
+
+	// Check redis set first
+	if CheckUsernameIsMember(username) {
+		return true
+	} else {
+		userDB.Model(&User{}).Where("username = ?", username).Count(&count)
+		if int(count) > 0 {
+			AddUsernameToSet(username)
+		}
+		return int(count) > 0
+	}
 }
 
 func ExistUserByID(id uint) bool {
