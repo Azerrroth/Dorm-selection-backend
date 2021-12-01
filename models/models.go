@@ -88,7 +88,7 @@ func init() {
 
 	if initDatabase := os.Getenv("INIT_DB_IF_EMPTY"); initDatabase != "" {
 		if int(GetUserCount("")) == 0 {
-			Init()
+			initializeData()
 		}
 	}
 	if err != nil {
@@ -140,7 +140,7 @@ func Test() {
 
 }
 
-func Init() {
+func initializeData() {
 	buildings := 10
 	rooms := 50
 	users := 50
