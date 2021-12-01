@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -119,7 +120,8 @@ func Login(c *gin.Context) {
 					c.Header("new-token", token)
 					data["token"] = token
 					data["userInfo"] = userInfo
-					if time.Since(*user.LoginAt).Minutes() > 5 {
+					if user.LoginAt == nil || time.Since(*user.LoginAt).Minutes() > 5 {
+						fmt.Println("登录时间超过5分钟")
 						currentTime := time.Now()
 						user.LoginAt = &currentTime
 						models.UpdateUser(&user)
