@@ -68,7 +68,7 @@ func InitRouter() *gin.Engine {
 		order := apiv1.Group("/order")
 
 		// order route function
-		order.POST("/bookOrder", v1.BookOrder)
+		order.POST("/bookOrder", v1.AddOrderToMQ)
 
 		// apiv1.POST("/bookOrder", v1.BookOrder)
 	}
