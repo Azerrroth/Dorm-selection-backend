@@ -25,7 +25,7 @@ func init() {
 	host = sec.Key("HOST").String()
 	port = sec.Key("PORT").String()
 
-	mq, err := amqp.Dial(fmt.Sprintf("amqp://%s:%s@%s:%s/", username, password, host, port))
+	mq, err = amqp.Dial(fmt.Sprintf("amqp://%s:%s@%s:%s/", username, password, host, port))
 	failOnError(err, "Failed to connect to RabbitMQ")
 	// defer mq.Close()
 

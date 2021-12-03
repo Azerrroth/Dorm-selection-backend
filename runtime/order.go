@@ -2,7 +2,6 @@ package runtime
 
 import (
 	"encoding/json"
-	"fmt"
 	"go-gin-example/models"
 	genderConfig "go-gin-example/pkg/gender"
 	"log"
@@ -44,8 +43,6 @@ func ConsumeMessage(queue amqp.Queue) {
 }
 
 func DealOrder(message string) {
-	log.Printf(" [x] Received %s", message)
-
 	var err error
 	formatMessage := make(map[string]interface{})
 	err = json.Unmarshal([]byte(message), &formatMessage)
@@ -54,22 +51,29 @@ func DealOrder(message string) {
 	buildingId := uint(formatMessage["buildingId"].(float64))
 	gender := uint(formatMessage["gender"].(float64))
 	usersNum := uint(formatMessage["usersNum"].(float64))
-	users := formatMessage["users"].([]interface{})
+	// users := formatMessage["users"].([]interface{})
 	userInfoList := []models.UserInfo{}
+	tempInterface := formatMessage["userInfo"].([]interface{})
 
-	for _, user := range users {
-		tempInfo := make(map[string]interface{})
-		tempInfo["userCertifyCode"] = user.(map[string]interface{})["userCertifyCode"]
-		tempInfo["userStudentId"] = user.(map[string]interface{})["userStudentId"]
-
-		tempUserInfo, err := models.GetUserInformationByStudentID(tempInfo["userStudentId"].(string))
-		if err != nil {
-			fmt.Println(err)
-			return
-		} else {
-			userInfoList = append(userInfoList, tempUserInfo)
-		}
+	for _, v := range tempInterface {
+		userInfo := models.UserInfo{}
+		tempStr, _ := json.Marshal(v)
+		json.Unmarshal(tempStr, &userInfo)
+		userInfoList = append(userInfoList, userInfo)
 	}
+	// for _, user := range users {
+	// 	tempInfo := make(map[string]interface{})
+	// 	tempInfo["userCertifyCode"] = user.(map[string]interface{})["userCertifyCode"]
+	// 	tempInfo["userStudentId"] = user.(map[string]interface{})["userStudentId"]
+
+	// 	tempUserInfo, err := models.GetUserInformationByStudentID(tempInfo["userStudentId"].(string))
+	// 	if err != nil {
+	// 		fmt.Println(err)
+	// 		return
+	// 	} else {
+	// 		userInfoList = append(userInfoList, tempUserInfo)
+	// 	}
+	// }
 
 	// 4. Make an order
 
@@ -113,5 +117,4 @@ func DealOrder(message string) {
 		models.AddUser2Room(user.ID, room.ID)
 	}
 	log.Printf(" [x] Done")
-
 }

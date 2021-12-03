@@ -182,6 +182,7 @@ func AddOrderToMQ(c *gin.Context) {
 			return
 		}
 	}
+	jsonReq["userInfo"] = userInfoList
 	messStr, _ := json.Marshal(jsonReq)
 	runtime.PublishMessage(que, string(messStr))
 	code = e.SUCCESS
